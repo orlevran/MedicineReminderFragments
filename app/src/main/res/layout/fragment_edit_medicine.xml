@@ -1,0 +1,205 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000"
+    tools:context="Fragments.EditMedicineFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/edit_medicine_name"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:hint="Medicine's name"
+                android:textSize="25dp"
+                android:layout_marginVertical="5dp"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/edit_type_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:tabGravity="center"
+                android:layout_marginVertical="5dp"
+                app:tabMode="scrollable"
+                android:background="#80808080"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="5dp">
+
+                    <ImageView
+                        android:id="@+id/edit_image_view"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/pill_logo"/>
+
+                    <TextView
+                        android:id="@+id/edit_medicine_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Medicine's name and it's type"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="5dp"
+                        android:textSize="20dp"/>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <Switch
+                    android:id="@+id/edit_morning_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Morning (04:00 - 10:59)"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:layout_marginVertical="5dp"/>
+                <SeekBar
+                    android:id="@+id/edit_morning_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <Switch
+                    android:id="@+id/edit_afternoon_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Afternoon (11:00 - 16:59)"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:layout_marginVertical="5dp"/>
+                <SeekBar
+                    android:id="@+id/edit_afternoon_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp">
+
+                <Switch
+                    android:id="@+id/edit_evening_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Evening (17:00 - 21:59)"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:layout_marginVertical="5dp"/>
+                <SeekBar
+                    android:id="@+id/edit_evening_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp">
+
+                <Switch
+                    android:id="@+id/edit_night_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Night (22:00 - 03:59)"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:layout_marginVertical="5dp"/>
+                <SeekBar
+                    android:id="@+id/edit_night_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/edit_initial_amount"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Total amount (mg)"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edittext_custom"/>
+                <EditText
+                    android:id="@+id/edit_dosage"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Single amount (mg)"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/edittext_custom"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginVertical="5dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/edit_cancel_button"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="40dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="20dp"
+                    android:text="Cancel"
+                    android:textAlignment="center"
+                    android:textSize="17dp"
+                    android:background="@drawable/left_button_custom"/>
+
+                <TextView
+                    android:id="@+id/edit_confirm_button"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="40dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="20dp"
+                    android:text="Confirm"
+                    android:textAlignment="center"
+                    android:textSize="17dp"
+                    android:background="@drawable/right_button_custom"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

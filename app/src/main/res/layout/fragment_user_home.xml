@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragments.UserHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/user_home_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            android:layout_margin="5dp"
+            android:background="#d0707070"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_home_rv"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_margin="5dp"
+            android:background="#4080c080"/>
+
+        <TextView
+            android:id="@+id/user_home_show_list"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Show list"
+            android:textSize="35dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="#70507090"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/user_home_edit_user"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Edit personal details"
+            android:textSize="35dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="#70509070"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/user_home_logout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Logout"
+            android:textSize="35dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="#70905070"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+</FrameLayout>

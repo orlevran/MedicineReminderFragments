@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    tools:context="Fragments.RefillFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set new initial amount: "
+            android:textSize="35dp"
+            android:textColor="#2020ff"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="10dp">
+
+            <EditText
+                android:id="@+id/refill_edit_text"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:inputType="numberDecimal"
+                android:textSize="30dp"
+                android:background="@drawable/edittext_custom"/>
+
+            <TextView
+                android:id="@+id/refill_approve"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="Approve"
+                android:textSize="30dp"
+                android:textColor="#2020c0"
+                android:background="@drawable/back_button_custom"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/refill_remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:text="Or Remove medicine"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="#2020c0"
+            android:background="@drawable/back_button_custom"/>
+
+    </LinearLayout>
+
+</FrameLayout>

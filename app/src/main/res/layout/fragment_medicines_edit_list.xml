@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    tools:context="Fragments.MedicinesEditListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/medicines_edit_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="10dp"
+            android:background="#30976d60"/>
+
+        <TextView
+            android:id="@+id/medicines_edit_back_button"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Back"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="35dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="#3033d060"/>
+
+    </LinearLayout>
+
+</FrameLayout>

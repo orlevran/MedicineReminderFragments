@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/medicine_edit_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#ee7799aa"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/medicine_edit_image_view"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:src="@drawable/ic_baseline_add_circle_outline_24"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <TextView
+            android:id="@+id/medicine_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:text="[Medicine name]"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/medicine_edit_add_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="XX : Click to add item"
+            android:textSize="0dp"/>
+
+        <TextView
+            android:id="@+id/medicine_edit_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="7dp"
+            android:text="XX[rr] left out of XX[dd]"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/medicine_edit_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="right"
+        android:text="&#8942;"
+        android:textSize="60dp" />
+
+</LinearLayout>
