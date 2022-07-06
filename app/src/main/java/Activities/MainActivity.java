@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements DataReceiver {
     SignupStepOneFragment stepOne;
     SignupStepTwoFragment stepTwo;
     UserHomeFragment home;
-    EditMedicineFragment edit;
+    //EditMedicineFragment edit;
+    EditMedicineFragment[] edits;
     MedicinesEditListFragment list;
     RefillFragment refill;
     MedicineDetailsFragment details;
@@ -71,7 +72,11 @@ public class MainActivity extends AppCompatActivity implements DataReceiver {
         stepTwo = new SignupStepTwoFragment(this);
         home = new UserHomeFragment(this, this);
         list = new MedicinesEditListFragment(this, this);
-        edit = new EditMedicineFragment(this, this);
+        //edit = new EditMedicineFragment(this, this);
+        edits = new EditMedicineFragment[MEDICINES_FOR_USER];
+        for (int i = 0 ; i < edits.length ; i++) {
+            edits[i] = new EditMedicineFragment(this, this);
+        }
         refill = new RefillFragment(this, this);
         details = new MedicineDetailsFragment(this, this);
     }
@@ -142,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements DataReceiver {
                 }
 
                 userController.getUser().setMedicines(medicines);
+                home.notifyAdapters();
                 manager.beginTransaction().replace(R.id.fcv, home, null).commitNow();
                 mainTitle.setText(String.format("Hello, %s", userController.getUser().getFirstName()));
                 startService(userController.getUser().getMedicines(), userController.getUser().getSponsor(),
@@ -168,8 +174,8 @@ public class MainActivity extends AppCompatActivity implements DataReceiver {
 
     @Override
     public void onEditMedicine(int index) {
-        edit.setPosition(index);
-        manager.beginTransaction().replace(R.id.fcv, edit, null).commitNow();
+        edits[index].setPosition(index);
+        manager.beginTransaction().replace(R.id.fcv, edits[index], null).commitNow();
     }
 
     @Override

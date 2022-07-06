@@ -172,7 +172,8 @@ public class EditMedicineFragment extends Fragment {
                                 } catch (Exception ex){
                                     initial.getText().clear();
                                     dosage.getText().clear();
-                                    Toast.makeText(this.context, "Invalid input", Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(this.context, "Invalid input", Toast.LENGTH_SHORT).show();
+                                    this.receiver.onEditList();
                                 }
                                 break;
                         }
