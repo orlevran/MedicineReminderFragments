@@ -7,12 +7,12 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\orlev\.android\avd\Pixel_2_API_30.avd" />
+            <value value="C:\Users\orlev\.android\avd\Pixel_3a_API_30_x86.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-06-14T15:45:32.558102800Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-07-06T16:53:26.783731500Z" />
     <targetsSelectedWithDialog>
       <Target>
         <type value="QUICK_BOOT_TARGET" />
